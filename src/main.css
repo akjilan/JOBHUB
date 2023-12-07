@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .card {
+      background-color: theme('colors.white');
+      border-radius: theme('borderRadius.lg');
+      padding: theme('spacing.6');
+      box-shadow: theme('boxShadow.xl');
+    }
+    /* header section  */
+
+    .nav-link-style
+    { @apply
+        text-xs md:text-base md:tracking-wide md:leading-5 font-sans font-bold text-[#7E90FE]
+    } 
+    .button-style-1{
+        @apply 
+        text-[#FFFFFF] text-sm  bg-[#7E90FE] rounded px-4 py-2 font-bold 
+    }
+  }
