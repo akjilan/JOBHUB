@@ -4,7 +4,7 @@ import vector from "../../assets/images/Vector.png";
 import location from "../../assets/images/smallIcons/location.png";
 import icon2 from "../../assets/images/smallIcons/salary.png";
 import jobListings from "../../constants/FeaturedJobs";
-
+import { Dialog } from '@headlessui/react'
 const JobDetails = () => {
   const [buttonText, setButtonText] = useState("Apply Now");
 
