@@ -6,9 +6,8 @@ const jobListings = [
   {
     id: 1,
     logo: logo1,
-    title: 'Senior Software Engineer',
+    title: 'Senior Software Engineerr',
     company: 'Tech Innovators Inc.',
-    remote: true,
     location: 'San Francisco, CA',
     salary: '$120,000 - $150,000',
     jobDescription: 'Join our dynamic team as a Senior Software Engineer and play a key role in developing innovative software solutions. Be part of cutting-edge projects that push the boundaries of technology.',
