@@ -18,7 +18,7 @@ const FeaturedPost = ({ job }) => {
       <div className="mt-4 flex gap-4">
         <h6 className="w-20  flex justify-center border border-gray-400 shadow-sm rounded py-2 font-bold text-sm text-[#7E90FE]">
           {
-           job.remote==undefined?'Unknown':job.remote?'Remote':'On sight'
+           job.remote==undefined?'Unknown':job.remote?'Remote':'Onsite'
 
           }
         </h6>
