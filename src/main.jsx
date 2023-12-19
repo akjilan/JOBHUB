@@ -51,13 +51,13 @@ const router = createBrowserRouter([
         path: "/blogs/:id",
         element: <Blogs></Blogs>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5001/news/${params.id}`),
+          fetch(`https://ocr-server-7ncn59jyf-jilannnaj-gmailcom.vercel.app/news/${params.id}`),
       },
       {
         path: `/catagory/:id`,
         element: <NewsDetails></NewsDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5001/news/${params.id}`),
+          fetch(`https://ocr-server-7ncn59jyf-jilannnaj-gmailcom.vercel.app/news/${params.id}`),
       },
       {
         path: "/appliedJobs",

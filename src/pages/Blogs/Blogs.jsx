@@ -9,13 +9,13 @@ const Blogs = () => {
   const [selectedCatagory, setSelectedCatagory] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:5001/catagories")
+    fetch("https://ocr-server-7ncn59jyf-jilannnaj-gmailcom.vercel.app/catagories")
       .then((res) => res.json())
       .then((data) => setCatagories(data))
       .catch((error) => console.log(error.message));
   }, []);
   useEffect(() => {
-    fetch("http://localhost:5001/news")
+    fetch("https://ocr-server-7ncn59jyf-jilannnaj-gmailcom.vercel.app/news")
       .then((res) => res.json())
       .then((data) => setAllNews(data))
       .catch((error) => console.log(error.message));
