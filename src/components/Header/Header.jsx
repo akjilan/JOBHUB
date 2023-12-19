@@ -16,13 +16,16 @@ const Header = () => {
           </a>
           <div className="flex md:gap-x-10 justify-around gap-x-5">
             <button className="nav-link-style">
-              <Link to="statistics">Statistics</Link>
+              <Link to="alljobs">Circulars</Link>
             </button>
             <button className="nav-link-style">
               <Link to="appliedJobs">Applied Jobs</Link>
             </button>
             <button className="nav-link-style">
               <Link to="blogs">Blog</Link>
+            </button>
+            <button className="nav-link-style">
+              <Link to="signin">Login</Link>
             </button>
           </div>
           <div className="flex items-center">

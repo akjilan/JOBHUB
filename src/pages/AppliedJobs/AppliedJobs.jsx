@@ -8,6 +8,7 @@ function classNames(...classes) {
 }
 
 import AppliedJob_card from "../../components/AppliedJobs_components/AppliedJob_card";
+import { Link } from "react-router-dom";
 
 const AppliedJobs = () => {
   const savedJobString = localStorage.getItem("savedJobs");
@@ -105,9 +106,16 @@ const AppliedJobs = () => {
       </section>
       <section>
         <div className="flex  flex-col justify-center items-center mx-auto my-4 lg:my-12">
-          {filteredJobs.map((jobs) => (
+       {
+        savedJobString?
+        <>
+           {filteredJobs.map((jobs) => (
             <AppliedJob_card key={jobs.id} jobs={jobs}></AppliedJob_card>
           ))}
+        </>
+        :
+        <h3 className="md:my-32 my-12 font-bold text-blue-950 text-xl tracking-wide">Sorry , you haven't applied to any jobs yet . <button className="btn btn-md btn-primary font-semibold"> <Link to="/alljobs">Go to Apply</Link> </button></h3>
+       }
         </div>
       </section>
     </>
