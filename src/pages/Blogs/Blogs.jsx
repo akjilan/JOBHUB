@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import CatagoryNewsCard from "./CatagoryNewsCard";
-
+import { apiKey } from "../../firebase/firebase.init";
 const Blogs = () => {
+  console.log("API Key:", apiKey);
   const [catagories, setCatagories] = useState([]);
   const [allNews, setAllNews] = useState([]);
   const [filterednews, setFilterednews] = useState([]);
   const [selectedCatagory, setSelectedCatagory] = useState();
 
   useEffect(() => {
-    fetch("https://ocr-server-7ncn59jyf-jilannnaj-gmailcom.vercel.app/catagories")
+    fetch(
+      "https://ocr-server-7ncn59jyf-jilannnaj-gmailcom.vercel.app/catagories"
+    )
       .then((res) => res.json())
       .then((data) => setCatagories(data))
       .catch((error) => console.log(error.message));
@@ -52,14 +55,12 @@ const Blogs = () => {
           filterednews.map((news) => (
             <CatagoryNewsCard news={news}></CatagoryNewsCard>
           ))
+        ) : allNews ? (
+          allNews.map((news) => (
+            <CatagoryNewsCard news={news}></CatagoryNewsCard>
+          ))
         ) : (
-         allNews?
-         
-         allNews.map((news) => (
-          <CatagoryNewsCard news={news}></CatagoryNewsCard>
-        ))
-        :
-        <h3>Select A catagory please . </h3>
+          <h3>Select A catagory please . </h3>
         )}
       </section>
     </div>
