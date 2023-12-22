@@ -8,11 +8,7 @@ const data = [
   { name: "Page C", uv: 200, pv: 2700, amt: 2900 },
 ];
 
-// useEffect(() => {
-//   fetch("http://localhost:5001/catagories")
-//     .then((res) => res.json())
-//     .then((data) => console.log(data));
-// }, []);
+
 const RenderLineChart = () => {
  
 
